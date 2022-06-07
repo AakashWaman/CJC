@@ -1,0 +1,34 @@
+<div class="card">
+  <div class="col-xl-12 offset-xl mt-3">
+    <table class="table table-striped" style="background: white;">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile-No</th>
+                <th scope="col">Email</th>
+                <th scope="col">Pan-No</th>
+                <th scope="col">Cibil</th>
+                <th scope="col">status</th>
+                <th scope="col" colspan="2" class="text-center">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let e of enquirylist">
+                <th scope="row">{{e.eid}}</th>
+                <td>{{e.e_name}}</td>
+                <td>{{e.e_mobile}}</td>
+                <td>{{e.e_email}}</td>
+                <td>{{e.e_pan}}</td>
+                <td>{{e.cibilscore}}</td>
+                <td>{{e.e_status}}</td>
+                <td><button class="btn btn-info"  *ngIf="e.cibilscore === 0" (click)="generateCIBIL(e)">Generate CIBIL</button></td>
+                <td><button class="btn btn-info" *ngIf="hidebtn" (click)="generatestatus(e)" >{{statusbutton}}</button></td>
+                
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+
+

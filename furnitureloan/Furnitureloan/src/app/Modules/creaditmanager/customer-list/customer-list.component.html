@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="col-xl-12 offset-xl mt-3">
+    <table class="table table-striped" style="background: white; padding: 20%;">
+      <thead >
+          <tr>
+              <th>Company Name</th>
+              <th>Company Email</th>
+              <th>Company no</th>
+              <th>Gst no</th>
+              <th>Loan Amount</th>
+              <th>interest Rate</th>
+              <th>cmStatus</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of companylist">
+          <td>{{c.companyname}}</td>
+          <td>{{c.company_email}}</td>
+          <td>{{c.company_mobile}}</td>
+          <td>{{c.company_gst}}</td>
+          <td>{{c.required_loan}}</td>
+          <td>{{c.interestrate}}</td>
+          <td>{{c.cmstatus}}</td>
+          <td *ngIf="c.cmstatus=== null">
+            <button class="btn btn-primary" [routerLink]="['verify',c.company_id]" [state]="c">Verify</button>
+          </td>
+          <td *ngIf="c.cmstatus=== null">
+            <button class="btn btn-primary" [routerLink]="['sanction']" [state]="c">Sanction Letter</button>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+ 
+<router-outlet></router-outlet>
+</div>

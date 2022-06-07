@@ -1,0 +1,67 @@
+<!-- <div class="col-md-6 offset-md-1"> -->
+<div class="card">
+    <div class="col-xl-10 offset-xl-1 mt-3">
+    <div style="background-color: rgb(253, 253, 253); border-radius: 20px; padding: 15px;">
+        <h3 class="text-center mb-5 mt-2" style="font-family: monospace;">Documents</h3>
+    <form (ngSubmit)="onupload()">
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">Photo :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile1($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2" >AadharCard :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile2($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">PanCard :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile3($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">AddressProof :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile4($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">BankStatement (Last 6month) :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile5($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">ITR (Last 3Year) :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile6($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">PDC Check :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile7($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">Signature :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile8($event)">
+        </div>
+        </div>
+        <div class="mb-4 row">
+            <label for="formFile" class="col-sm-3 col-form-label ml-2">Furniture Quotation :</label>
+            <div class="col-sm-8">
+            <input class="form-control" type="file" id="formFile" (change)="onselectedFile9($event)">
+            </div>
+        </div>
+        
+        <div class="mb-3 ml-4 mt-5">
+            <input type="submit" value="Upload" class="btn btn-primary">&nbsp;
+            <input type="reset" value="Reset" class="btn btn-warning">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="col-xl-12 offset-xl mt-4">
+        <div style="background-color: rgb(253, 253, 253); border-radius: 10px; padding: 10px;">
+    <table class="table-bordered">
+        <tr *ngIf="d">
+            <td><h3>photo</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.photo" height="150"></td>
+        </tr>
+        <tr *ngIf="d">
+            <td><h3>Aadharcard</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.aadharcard" height="150"></td>
+        </tr>
+        <tr *ngIf="d">
+            <td><h3>pancard</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.pancard" height="150"></td>
+        </tr>
+        <tr *ngIf="d">
+            <td><h3>Address Prof</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.addressproof" height="150"></td>
+        </tr>
+        <tr *ngIf="d">
+            <td><h3>BankStatement</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.bankstatement" height="150"></td>
+        </tr>
+        <tr *ngIf="d">
+            <td><h3>ITR</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.itr" height="150"></td>
+        </tr>
+            <tr *ngIf="d">
+            <td><h3>PDC Cheque</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.pdccheck" height="150"></td>
+        </tr>
+            <tr *ngIf="d">
+                <td><h3>Signature</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.signature" height="150"></td>
+        </tr>
+            <tr *ngIf="d">
+                <td><h3>Quotation</h3></td>
+            <td><img [src]="'data:image/jpeg;base64,'+d.quotation" height="150"></td>
+        </tr> 
+    </table>
+    <div>
+        <button class="btn btn-primary" (click)="toapprove('Approved')">Approve</button>
+        <button class="btn btn-danger" (click)="toreject('Reject')">Reject</button>
+    </div>
+    </div>    
+</div>
+</div>

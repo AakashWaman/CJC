@@ -1,0 +1,235 @@
+
+<div class="card">
+    <div class="col-xl-10 offset-xl-1 mt-3">
+    <div style="background-color: rgb(253, 253, 253); border-radius: 20px; padding: 15px;">
+    <form [formGroup]="registercustomer" (ngSubmit)="onSubmit()">
+
+    <div *ngIf="step==1">
+        <h2 class="text-center" style="color: rgb(78, 19, 19); font-family: monospace">Company Details</h2>
+        <div class="form-row mt-4">
+            <div class="col-lg-6"> company name:<input type="text" class="form-control" placeholder=" Enter your company name" formControlName="companyname"><br></div>
+            <div class="col-lg-6">company email:<input type="text" class="form-control" placeholder=" enter your email addr here " formControlName="company_email"></div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-6"> Company Contact No:<input type="text" class="form-control" placeholder="enter your contact no here" formControlName="company_mobile"><br></div>
+            <div class="col-lg-6"> Company Shopact ID:<input type="text" class="form-control" placeholder="enter firm's shopactno" formControlName="company_shopactno"><br></div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-6">
+                    Company Established Date:<input type="date" class="form-control" placeholder="enter company established year" formControlName="company_startdate"><br>
+            </div>
+            <div class="col-lg-6">
+                    Company GST no:<input type="text" class="form-control" placeholder=" enter company gst no" formControlName="company_gst"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-6">
+                    Company partner No:<input type="text" class="form-control" placeholder="enter no of partner" formControlName="company_partnerno"><br>
+            </div>
+            <div class="col-lg-6">
+                    Company Pan No:<input type="text" class="form-control" placeholder="enter your pan no" formControlName="company_pan"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-6">
+                    Required Loan Amount:<input type="text" class="form-control" placeholder="enter your loan amount" formControlName="required_loan"><br>
+            </div>
+            <div class="col-lg-6">
+                    Loan Tenure:<input type="text" class="form-control" placeholder="enter expected tenure of required loan" formControlName="tenure"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-6">
+                Interest Rate:<input type="text" class="form-control" placeholder="enter expected rate of interest" formControlName="interestrate"><br>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="step==2">
+    <h2 class="text-center" style="color: rgb(78, 19, 19); font-family: monospace">Address Details</h2>   
+        <div formGroupName="address">
+                
+            <div class="form-row mt-4">
+                <div class="col-lg-6" >
+                    address field-1:<input type="text" class="form-control" placeholder="enter your address" formControlName="a_field1" ><br>
+                </div>
+                <div class="col-lg-6">                       
+                    address field-2:<input type="text" class="form-control" placeholder="enter your address" formControlName="a_field2"><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                        landmark:<input type="text" class="form-control" placeholder="enter your address landmark" formControlName="landmark"><br>
+                </div>
+                <div class="col-lg-6">                  
+                        pincode:<input type="text" class="form-control" placeholder="enter your postal code" formControlName="pincode"><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                        taluka:<input type="text" class="form-control" placeholder="enter your taluka name" formControlName="taluka"><br>
+                </div>
+                <div class="col-lg-6">    
+                    district:<input type="text" class="form-control" placeholder="enter your district name" formControlName="district"><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                        state:<input type="text" class="form-control" placeholder="enter your state name" formControlName="state"><br>
+                </div>
+                <div class="col-lg-6">
+                        country:<input type="text" class="form-control" placeholder="enter your country name" formControlName="country"><br>
+                </div>
+            </div> 
+        </div>
+    </div><br>
+
+
+    <div *ngIf="step==3">
+    <h2 class="text-center" style="color: rgb(78, 19, 19); font-family: monospace">Gaurantors Details</h2>      
+        <div formGroupName="gurantor">
+            <div class="form-row mt-4">
+                <div class="col-lg-6" >
+                    guarantor name:<input type="text" class="form-control" placeholder="enter guarantor full name" formControlName="g_name"><br>
+                </div>
+                <div class="col-lg-6">
+                    guarantor relation:<input type="text" class="form-control" placeholder="gaurantor relation with customer" formControlName="g_relation"><br>
+                </div>
+            </div> 
+            <div class="form-row">
+                <div class="col-lg-6" >
+                            guarantor contact no :<input type="text" class="form-control" placeholder="enter gaurantor contact no" formControlName="g_mobileno"><br>
+                </div>
+                <div class="col-lg-6">        
+                    guarantor aadhar:<input type="text" class="form-control" placeholder="enter gaurantor Adhar no" formControlName="g_aadhar"><br>
+                </div>
+            </div>  
+            <div class="form-row">
+                <div class="col-lg-3"> 
+                    guarantor pan:<input type="text" class="form-control" placeholder="enter gaurantor pan no" formControlName="g_pan"><br>
+                </div>
+            </div>
+              
+        <div formGroupName="g_address">
+            <div class="form-row mt-4">
+                <div class="col-lg-6" >
+                    guarantor permanent address:<input type="text" class="form-control" placeholder="enter guarantor permananent address" formControlName="a_field1"><br>
+                </div>
+                <div class="col-lg-6">                         
+                    guarantor temperary address:<input type="text" class="form-control" placeholder="enter guarantor temperary address" formControlName="a_field2"><br>
+                </div>
+            </div> 
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    guarantor landmark:<input type="text" class="form-control" placeholder="enter guarantor address landmark" formControlName="landmark"><br>
+                </div>
+                <div class="col-lg-6">  
+                    guarantor pincode:<input type="text" class="form-control" placeholder="enter guarantor postal code" formControlName="pincode"><br>
+                </div>
+            </div> 
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    guarantor taluka:<input type="text" class="form-control" placeholder="enter guarantor taluka name" formControlName="taluka"><br>
+                </div>
+                <div class="col-lg-6">
+                    guarantor  district:<input type="text" class="form-control" placeholder="enter guarantor district name" formControlName="district"><br>
+                </div>   
+            </div> 
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    guarantor  state:<input type="text" class="form-control" placeholder="enter guarantor state name" formControlName="state"><br>
+                </div>
+                <div class="col-lg-6">
+                    guarantor  country:<input type="text" class="form-control" placeholder="enter guarantor country name" formControlName="country">
+                </div>            
+            </div> 
+        </div>
+        <div class="form-row mb-3">
+            <div class="col-lg-6">
+                guarantor occupation:<input type="text" class="form-control" placeholder="enter gauranter occupation" formControlName="g_occupation"><br>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="step==4">
+    <h2 class="text-center" style="color: rgb(78, 19, 19); font-family: monospace">Bank Details</h2>          
+        <div formGroupName="accountdetail">
+            <div class="form-row mt-4">
+                <div class="col-lg-6" >
+                    account bank name:<input type="text" class="form-control" placeholder="enter account bank name" formControlName="acc_bankname"><br>
+                </div>
+                <div class="col-lg-6">
+                    account number:<input type="text" class="form-control" placeholder="enter account number" formControlName="acc_number"><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    account type:<input type="text" class="form-control" placeholder="enter account type" formControlName="acc_type"><br>
+                </div>
+                <div class="col-lg-6">
+                    account holder name:<input type="text" class="form-control" placeholder="enter account holder name"  formControlName="acc_holdername"><br>
+                </div>  
+            </div> 
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    
+                    account balance:<input type="text" class="form-control" placeholder="enter account balance"  formControlName="acc_bal"><br>
+                </div>
+                <div class="col-lg-6">
+                    account status:<input type="text" class="form-control" placeholder="enter account status"  formControlName="acc_status"><br>
+                </div> 
+            </div>       
+        </div> 
+    </div>                
+
+
+    <div *ngIf="step==5">
+    <h2 class="text-center" style="color: rgb(78, 19, 19); font-family: monospace">Previous Loan Details</h2>
+        <div formGroupName="preloan">
+            <div class="mt-4">
+                previous loan bank name:<input type="text" class="form-control" placeholder="enter previous loan bank name" formControlName="p_Loanbank"><br>
+                previous loan date:<input type="date" class="form-control" placeholder="enter previous loan date" formControlName="p_loandate"><br>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    previous loan amount:<input type="text" class="form-control" placeholder="enter previous loan amount" formControlName="p_loanamount"><br>
+                </div>
+                <div class="col-lg-6" >
+                    previous loan tenure:<input type="text" class="form-control" placeholder="enter  previous loan tenure" formControlName="p_loantenure"><br>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6" >
+                    previous loan type:<input type="text" class="form-control" placeholder="enter previous loan type" formControlName="p_loantype">
+                </div>
+                <div class="col-lg-6" >
+                    previous loan lastpaid:<input type="text" class="form-control" placeholder="enter your previous loan last installment" formControlName="p_loanlastpaid">
+                </div>
+            </div>            
+        </div><br>
+    </div>
+    <div class="form-row">
+        <div class="col-lg-6" >
+            <div style="margin-left: 5%;" >
+            <a class="btn btn-info" *ngIf="step!=1" (click)="onprevious()" style="color: aliceblue;">Previous</a>&nbsp;
+            <input type="submit" value="Register" class="btn btn-success" *ngIf="step==5">
+            </div>
+        </div>
+        <div class="col-lg-6" >
+        <div style="margin-left: 82%;" >
+            <a class="btn btn-info" *ngIf="step!=5" (click)="onnext()" style="color: aliceblue;">Next</a>
+        </div>
+        </div> 
+    </div>
+
+    </form>
+    </div>
+</div>
+
+<p class="text-center font-italic mt-5 ">@Copyright B141-Team_2</p>
+    
+</div>
+

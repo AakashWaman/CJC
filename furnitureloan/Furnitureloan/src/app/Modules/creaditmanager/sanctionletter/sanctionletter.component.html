@@ -1,0 +1,72 @@
+<div class="container">
+<div class="col-xl-12 offset-xl mt-4">
+  <div style="background-color: rgb(253, 253, 253); border-radius: 10px; padding: 10px;">
+    <form [formGroup]="sanctionForm" (ngSubmit)="onSubmitSanction()" id="sanctionpdf">
+    <div class="card mt-3" style="width: 55rem;">
+      <div class="card-body">
+        <h4 class="card-title text-center" >Sanction Letter</h4><br>
+        <h6 class="card-subtitle mb-2 text-muted">Dear Customer,</h6>
+        <p class="card-text"> We thank you for chosing ABC Finance. We are Please to inform you that we have in principle approved loan to you as per T&C mentioned below.</p>
+        
+        <table class="table table-bordered">
+          <thead>
+              <tr>
+                <td>Product</td>
+                <td>Furniture Loan</td>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>compname</td>
+              <td><input class="form-control"  type="text" formControlName="compname" readonly></td>
+            </tr>
+            </tbody>
+          <tbody>
+            <tr>
+              <td>loanamount: (Rs)</td>
+              <td><input class="form-control"  type="text" formControlName="loanamount" ></td>
+            </tr>
+            <tr>
+              <td>tenure: (year)</td>
+              <td><input class="form-control"  type="text" formControlName="tenure" ></td>
+            </tr>
+            <tr>
+              <td>intrest rate: (%)</td>
+              <td><input class="form-control"  type="text" formControlName="intrest" ></td>
+            </tr>
+            <tr>
+              <td>intrestamount</td>
+              <td><input class="form-control"  type="text" formControlName="intrestamount" readonly></td>
+            </tr>
+            <tr>
+              <td>EMI (monthly)</td>
+              <td><input class="form-control"  type="text" formControlName="emi" readonly></td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <p>Additionl condition to comply prior to disbursal:</p>
+        <div class="row">
+          <div class="col-md-6">
+          <ol>
+          <li>Legal vetting & search to be done.</li>
+          <li>noc for tenant at offered collateral.</li>
+          <li>conformation from official ID and copy of ID required.</li>
+          </ol>
+          </div>
+        </div>
+        <div class="offset-md-9">
+          <ul>Thanks and Regards</ul>
+          <ul>XXXX</ul>
+          <ul>ABC Finance</ul>
+        </div>
+      </div>
+    </div><br>
+    <input type="submit" class="btn btn-primary "  value="Submit"> &nbsp; &nbsp;
+  </form>
+  <br>
+  <button class="btn btn-success" (click)="generatepdf()">Generate PDF</button> &nbsp; &nbsp;
+  </div>
+</div>
+  <p class="text-center font-italic mt-5 ">@Copyright B141-Team_2</p>
+</div>

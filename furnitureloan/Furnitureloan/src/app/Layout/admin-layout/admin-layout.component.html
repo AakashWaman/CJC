@@ -1,0 +1,17 @@
+
+<nav class="navbar  navbar-light" style="background-color: rgb(127, 176, 221);">
+    <span class="navbar-brand mb-0 h1" style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight: 500;">ABC Finance</span>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-danger" type="submit" routerLink="/log">Logout</button>
+    </form>
+    <!-- 'Lucida Sans Unicode', sans-serif; -->
+  </nav>
+    <div class="row">
+    <div class="col">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="main content col-sm-10">
+            <router-outlet></router-outlet>
+    </div>
+</div>
+<!-- <app-fixedplugin></app-fixedplugin> -->

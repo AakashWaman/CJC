@@ -1,0 +1,44 @@
+
+<div class="card">
+  <div class="col-xl-12 offset-xl mt-3">
+    <div style="background-color: rgb(253, 253, 253); border-radius: 10px; padding: 10px;">
+    <table class="table table-striped" >
+        <thead>
+            <th>Eid</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th class="text-center">Email</th>
+            <th>Pan No.</th>
+            <th>Status</th>
+            <th>CibilScore</th>
+            <th>Req Loan</th>
+            <th class="text-center" colspan="2">Action</th>
+        </thead>
+      <tbody >
+        <tr *ngFor="let e of enq">
+          <td>{{e.eid }}</td>
+          <td>{{e.e_name }}</td>
+          <td>{{e.e_mobile }}</td>
+          <td>{{e.e_email }}</td>
+          <td>{{e.e_pan }}</td>
+          <td>{{e.e_status }}</td>
+          <td>{{e.cibilscore }}</td>
+          <td>{{e.required_loan }}</td>
+          <td *ngIf="e.e_status === 'Approved'">
+            <button class="btn btn-success" [routerLink]="['register-company']" [state]="e">Register</button>
+          </td>
+          <td *ngIf="e.e_status === 'Rejected'">
+            <a class="btn" (click)="todelete(e.eid)">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+          <td *ngIf="e.e_status === 'Approved'">
+            <button class="btn btn-success" [routerLink]="['upload-document',e.e_name]">Document</button>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

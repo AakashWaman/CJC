@@ -1,0 +1,35 @@
+<div class="body">
+<div class="container">
+  <div class="col-xl-12 offset-xl">
+    <div style="background-color: rgb(253, 253, 253); border-radius: 10px; padding: 10px;">
+    <table class="table table-striped">
+      <tbody >
+          <tr>
+              <th>Company Name</th>
+              <th>Company Email</th>
+              <th>Company no</th>
+              <th>Gst no</th>
+              <th>Loan Amount</th>
+              <th>Interest Rate</th>
+              <th>Action</th>
+          </tr>
+        <tr *ngFor="let c of companyarray">
+          <td>{{c.companyname}}</td>
+          <td>{{c.company_email}}</td>
+          <td>{{c.company_mobile}}</td>
+          <td>{{c.company_gst}}</td>
+          <td>{{c.required_loan}}</td>
+          <td>{{c.interestrate}}</td>
+          <td>
+            <button class="btn btn-warning" [routerLink]="['payemi',c.company_id]" [state]="c">PayEMI</button>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" [routerLink]="['/home']">HomePage</button>
+  </div>
+  </div>
+</div>
+
+  <router-outlet></router-outlet>
+</div>

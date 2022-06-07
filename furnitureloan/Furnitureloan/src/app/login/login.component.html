@@ -1,0 +1,46 @@
+<!-- <div class="wrapper fadeInDown">
+  <div id="formContent">
+    
+
+    <form (ngSubmit)="login(u)">
+      <h2>UserName:- </h2>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Login" [(ngModel)]="u.username">
+      <h2>Password</h2>
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password" [(ngModel)]="u.password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+    <button class="btn btn-primary" [routerLink]="['/home']">HomePage</button>
+  </div>
+</div> -->
+
+<section class="vh-150" style="background-color: #9cb8ec;">
+  <div class="container py-5 h-120">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <form (ngSubmit)="login(u)">
+            <h3 class="mb-5">Login</h3>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="typeEmailX-2">Username</label>
+              <input type="text" id="login"  name="login" class="form-control form-control-lg" [(ngModel)]="u.username"/>
+              
+            </div>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="typePasswordX-2">Password</label>
+              <input type="text" id="password" name="login" class="form-control form-control-lg" [(ngModel)]="u.password"/>
+              
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <hr class="my-4">
+            <button class="btn btn-primary btn-lg btn-block" [routerLink]="['/home']" style="background-color: #c45236">Home</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

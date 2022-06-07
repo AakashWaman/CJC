@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="col-xl-12 offset-xl mt-3">
+    <table class="table table-striped" style="background: white;  border-radius: 15px;">
+      <thead >
+          <tr>
+              <th>Company Name</th>
+              <th>Company Email</th>
+              <th>Company no</th>
+              <th>Gst no</th>
+              <th>Loan Amount</th>
+              <th>interest Rate</th>
+              <th>send Email</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of companyarray">
+          <td>{{c.companyname}}</td>
+          <td>{{c.company_email}}</td>
+          <td>{{c.company_mobile}}</td>
+          <td>{{c.company_gst}}</td>
+          <td>{{c.required_loan}}</td>
+          <td>{{c.interestrate}}</td>
+          <td>
+              <button class="btn btn-danger" (click)="sanctionlettermail(c)">Post Email</button>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+

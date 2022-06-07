@@ -1,0 +1,51 @@
+<div class="container">
+      <div class="col-xl-12 offset-xl mt-4">
+        <div style="background-color: rgb(253, 253, 253); border-radius: 10px; padding: 10px;">
+        <form [formGroup]="ledgerForm" (ngSubmit)="onSubmitSanction()">
+        <h3 class="card-title text-center" style="font-style: oblique;" >Ledger</h3><br>
+       
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td>compname</td>
+                    <td><input class="form-control"  type="text" formControlName="compname" readonly></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>totalloan: (principle+intrest) (Rs)</td>
+                    <td><input class="form-control"  type="text" formControlName="totalloan" readonly></td>
+                </tr>
+                <tr>
+                    <td>loan duration: (month)</td>
+                    <td><input class="form-control"  type="text" formControlName="duration" readonly></td>
+                </tr>
+                <tr>
+                    <td>EMI (monthly)</td>
+                    <td><input class="form-control"  type="text" formControlName="emi" readonly></td>
+                </tr>
+                <tr>
+                    <td>loan paid: (month)</td>
+                    <td><input class="form-control"  type="text" formControlName="monthspaid" readonly></td>
+                </tr>
+                
+                <tr>
+                    <td>loan paid: (Rs)</td>
+                    <td><input class="form-control"  type="text" formControlName="loanpaid" readonly></td>
+                </tr>
+               
+                <tr>
+                    <td>loan amount remaining:</td>
+                    <td><input class="form-control"  type="text" formControlName="loanremaining" readonly></td>
+                </tr>
+            </tbody>
+        </table><br>
+        <input type="submit" class="btn btn-primary btn-block "  value="Pay EMI">
+   
+    </form>
+</div>
+      </div>
+
+  <p class="text-center font-italic mt-5 ">@Copyright B141-Team_2</p>
+</div> 
+

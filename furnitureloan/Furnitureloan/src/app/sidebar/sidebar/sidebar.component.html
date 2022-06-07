@@ -1,0 +1,15 @@
+
+<!-- <div class="logo" >
+          <img src="assets\img\abc-financial-services.jpg" width="100" height="100"/>
+  </div> -->
+
+  <div class="sidebar" >
+        <div routerLinkActive="active" *ngFor="let menuItem of menuItems[0][role]" class="{{menuItem.class}} nav-item">
+            <a  [routerLink]="[role,menuItem.path]">
+                <p>{{menuItem.title}}</p> 
+            </a>
+        </div>
+</div>
+
+
+  
